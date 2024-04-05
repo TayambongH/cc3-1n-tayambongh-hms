@@ -19,19 +19,19 @@ namespace CC3_1N_HMS
 
         public void BookRoom(HotelRoom room, DateTime startTime, DateTime endTime)
         {
-            // Check if the room is available
+            
             if (!room.IsAvailable)
             {
                 Console.WriteLine("Room is not available for booking.");
                 return;
             }
 
-            // Make reservation
+           
             int reservationNumber = GenerateReservationNumber();
             Reservation reservation = new Reservation(reservationNumber, startTime, endTime, room);
             Reservations.Add(reservation);
 
-            // Update room availability
+            
             room.IsAvailable = false;
 
             Console.WriteLine($"Room {room.RoomNumber} booked successfully.");
@@ -39,8 +39,8 @@ namespace CC3_1N_HMS
 
         private int GenerateReservationNumber()
         {
-            // Implement reservation number generation logic
-            return 0; // Placeholder, replace with actual logic
+            
+            return 0; 
         }
 
         public void DisplayReservations()
